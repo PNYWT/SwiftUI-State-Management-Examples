@@ -2,32 +2,20 @@
 
 คลังตัวอย่างโค้ดสำหรับซีรีส์บทความ **Back to Basic SwiftUI State Management**
 
-repo นี้ตั้งใจทำไว้เป็นตัวอย่างประกอบบทความ โดยเริ่มจากพื้นฐานของการจัดการ state ใน SwiftUI และจะค่อย ๆ ขยายไปสู่แนวทางที่ลึกขึ้นในตอนถัด ๆ ไป
+repo นี้ตั้งใจทำไว้เป็นตัวอย่างประกอบบทความ โดยจะค่อย ๆ เพิ่มหัวข้อในแต่ละตอนของซีรีส์ เพื่อให้เปิดอ่านบทความควบคู่กับโค้ดจริงในโปรเจกต์ได้ง่ายขึ้น
 
-ลิงก์บทความ:
+## บทความในซีรีส์
 
 - [Back to Basic SwiftUI State Management ที่ควรรู้ Part 1](https://medium.com/@punyawat.codercamp/back-to-basic-swiftui-state-management-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%84%E0%B8%A7%E0%B8%A3%E0%B8%A3%E0%B8%B9%E0%B9%89-part-1-5ee9492c041b)
+- [Back to Basic SwiftUI State Management ที่ควรรู้ Part 2](https://medium.com/@punyawat.codercamp/back-to-basic-swiftui-state-management-%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%84%E0%B8%A7%E0%B8%A3%E0%B8%A3%E0%B8%B9%E0%B9%89-part-2-b7cb62e0fc98)
+- Observation framework (iOS 17+) จะอยู่ใน PART 3
 
 ## เป้าหมายของ Repo
-
-repo นี้ถูกออกแบบมาเพื่อใช้เป็นตัวช่วยในการอ่านบทความซีรีส์นี้ โดยมีแนวคิดหลักดังนี้
 
 - ทำตัวอย่างให้เล็ก อ่านง่าย และหยิบไปทดลองต่อได้ทันที
 - แยกอธิบายทีละแนวคิด เพื่อให้เห็นบทบาทของแต่ละ property wrapper ชัดเจน
 - ช่วยให้เข้าใจ data flow ใน SwiftUI ได้ง่ายขึ้น
-- ใช้เป็นพื้นที่เปรียบเทียบแนวทางแบบเดิมและแบบใหม่เมื่อซีรีส์ขยายต่อ
-
-## หัวข้อที่ซีรีส์นี้จะครอบคลุม
-
-หัวข้อที่ตั้งใจจะค่อย ๆ เพิ่มเข้ามาใน repo นี้ เช่น
-
-- `@State`
-- `@Binding`
-- `ObservableObject`
-- `@ObservedObject`
-- `@StateObject`
-- `Observation` สำหรับ iOS 17
-- แนวคิดที่เกี่ยวข้องกับ data flow ใน SwiftUI
+- ใช้เป็นพื้นที่ต่อยอดจากพื้นฐานไปสู่แนวทางที่ลึกขึ้นในแต่ละ part
 
 ## โครงสร้างปัจจุบัน
 
@@ -36,24 +24,24 @@ MyState/
   BasicState/
     State/
     Binding/
+  ObservableObject/
+    ViewModel/
+    StateObject/
+    ObservedObject/
 ```
 
-## ตัวอย่างที่มีอยู่ตอนนี้
+## เนื้อหาในแต่ละ Part
 
-### `@State`
+### PART 1
 
-อยู่ในโฟลเดอร์ `MyState/BasicState/State`
+อยู่ในโฟลเดอร์ `MyState/BasicState`
 
-- ค่าที่ใช้แสดงผลบนหน้าจอ
-- loading state
-- form input
-- selected item
-- toggle state
-- navigation state
+หัวข้อหลักใน part นี้คือ
 
-### `@Binding`
+- `@State`
+- `@Binding`
 
-อยู่ในโฟลเดอร์ `MyState/BasicState/Binding`
+ตัวอย่างที่มีตอนนี้ เช่น
 
 - ค่าที่ใช้แสดงผลบนหน้าจอ
 - loading state
@@ -62,22 +50,29 @@ MyState/
 - toggle state
 - navigation state
 
-ตัวอย่าง `@Binding` ใน repo นี้จะจัดให้เห็นความสัมพันธ์ชัด ๆ ว่า
+### PART 2
 
-- parent view เป็นเจ้าของ source of truth ด้วย `@State`
-- child view รับค่าผ่าน `@Binding`
-- child view สามารถเปลี่ยนค่าที่ parent ถืออยู่ได้
+อยู่ในโฟลเดอร์ `MyState/ObservableObject`
 
-## แผนสำหรับตอนถัดไป
+part นี้เพิ่มตัวอย่าง `ObservableObject` เข้าไปใน project แล้ว เพื่อให้เห็นลำดับการเรียนรู้จาก object ไปสู่ view ที่เป็น owner และ view ที่รับมา observe ต่อ
 
-ตอนต่อ ๆ ไปของซีรีส์จะค่อย ๆ เพิ่มตัวอย่างในเรื่องต่อไปนี้
+หัวข้อหลักใน part นี้คือ
 
 - `ObservableObject`
-- `@ObservedObject`
 - `@StateObject`
-- การเปรียบเทียบรูปแบบการถือ ownership ของข้อมูล
-- `Observation` ใน iOS 17
-- แนวทางย้ายจากรูปแบบเดิมไปสู่รูปแบบใหม่
+- `@ObservedObject`
+
+ไฟล์หลักในหมวดนี้ เช่น
+
+- `CounterViewModel.swift`
+- `CounterStateObjectView.swift`
+- `CounterObservedObjectView.swift`
+
+### PART 3
+
+หัวข้อที่วางไว้สำหรับ part ถัดไปคือ
+
+- `Observation framework (iOS 17+)`
 
 ## แนวทางของโปรเจกต์นี้
 
@@ -91,15 +86,12 @@ repo นี้ตั้งใจให้เป็นแหล่งเรีย
 
 ## เหมาะกับใคร
 
-repo นี้เหมาะกับ
-
 - คนที่เริ่มต้นเรียน SwiftUI
 - คนที่อยากทบทวนเรื่อง state management แบบพื้นฐาน
 - คนที่อ่านบทความและอยากเปิดดูตัวอย่างควบคู่กัน
-- คนที่อยากเปรียบเทียบ `@State`, `@Binding` และแนวทางใหม่ของ SwiftUI
+- คนที่อยากเห็นความต่างระหว่าง `@State`, `@Binding`, `ObservableObject`, `@StateObject` และ `@ObservedObject`
 
 ## หมายเหตุ
 
-- ตัวอย่างบางส่วนในอนาคตอาจต้องใช้ iOS เวอร์ชันใหม่ โดยเฉพาะหัวข้อ `Observation`
-- โครงสร้างของ repo อาจขยายเพิ่มตามเนื้อหาของบทความในแต่ละตอน
-
+- ตัวอย่างใน repo นี้จะค่อย ๆ เพิ่มตามเนื้อหาในแต่ละ part
+- หัวข้อ `Observation framework` จะถูกแยกไปอยู่ใน PART 3 ตามลำดับการเรียนรู้

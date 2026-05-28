@@ -22,6 +22,10 @@
 		B296D71C2FC6B853009FF6E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B296D7132FC6B853009FF6E8 /* ContentView.swift */; };
 		B296D7202FC6B853009FF6E8 /* MyStateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B296D7172FC6B853009FF6E8 /* MyStateApp.swift */; };
 		B296D7242FC6B853009FF6E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B296D7122FC6B853009FF6E8 /* Assets.xcassets */; };
+		B2D2A14C2FC8478B00E77452 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B2D2A14B2FC8478B00E77452 /* README.md */; };
+		C10000022FD1000000A00001 /* CounterStateObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10000132FD1000000A00001 /* CounterStateObjectView.swift */; };
+		C10000032FD1000000A00001 /* CounterObservedObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10000142FD1000000A00001 /* CounterObservedObjectView.swift */; };
+		C10000062FD1000000A00001 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10000172FD1000000A00001 /* CounterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		B296D7122FC6B853009FF6E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B296D7132FC6B853009FF6E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B296D7172FC6B853009FF6E8 /* MyStateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStateApp.swift; sourceTree = "<group>"; };
+		B2D2A14B2FC8478B00E77452 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C10000132FD1000000A00001 /* CounterStateObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStateObjectView.swift; sourceTree = "<group>"; };
+		C10000142FD1000000A00001 /* CounterObservedObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterObservedObjectView.swift; sourceTree = "<group>"; };
+		C10000172FD1000000A00001 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +117,47 @@
 			isa = PBXGroup;
 			children = (
 				B27D25C32FC6FB0F00F85319 /* BasicState */,
+				C10000212FD1000000A00001 /* ObservableObject */,
 				B296D7122FC6B853009FF6E8 /* Assets.xcassets */,
 				B296D7132FC6B853009FF6E8 /* ContentView.swift */,
 				B296D7172FC6B853009FF6E8 /* MyStateApp.swift */,
 			);
 			path = MyState;
+			sourceTree = "<group>";
+		};
+		C10000212FD1000000A00001 /* ObservableObject */ = {
+			isa = PBXGroup;
+			children = (
+				C10000252FD1000000A00001 /* ViewModel */,
+				C10000242FD1000000A00001 /* StateObject */,
+				C10000232FD1000000A00001 /* ObservedObject */,
+				B2D2A14B2FC8478B00E77452 /* README.md */,
+			);
+			path = ObservableObject;
+			sourceTree = "<group>";
+		};
+		C10000232FD1000000A00001 /* ObservedObject */ = {
+			isa = PBXGroup;
+			children = (
+				C10000142FD1000000A00001 /* CounterObservedObjectView.swift */,
+			);
+			path = ObservedObject;
+			sourceTree = "<group>";
+		};
+		C10000242FD1000000A00001 /* StateObject */ = {
+			isa = PBXGroup;
+			children = (
+				C10000132FD1000000A00001 /* CounterStateObjectView.swift */,
+			);
+			path = StateObject;
+			sourceTree = "<group>";
+		};
+		C10000252FD1000000A00001 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C10000172FD1000000A00001 /* CounterViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2D2A14C2FC8478B00E77452 /* README.md in Resources */,
 				B296D7242FC6B853009FF6E8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B296D71C2FC6B853009FF6E8 /* ContentView.swift in Sources */,
+				C10000022FD1000000A00001 /* CounterStateObjectView.swift in Sources */,
+				C10000032FD1000000A00001 /* CounterObservedObjectView.swift in Sources */,
+				C10000062FD1000000A00001 /* CounterViewModel.swift in Sources */,
 				B27D25C42FC6FB0F00F85319 /* DisplayValueBindingExample.swift in Sources */,
 				B27D25C52FC6FB0F00F85319 /* FormInputBindingExample.swift in Sources */,
 				B27D25C62FC6FB0F00F85319 /* LoadingBindingExample.swift in Sources */,

@@ -19,6 +19,10 @@
 		B27D25CD2FC6FB0F00F85319 /* NavigationStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D25BF2FC6FB0F00F85319 /* NavigationStateView.swift */; };
 		B27D25CE2FC6FB0F00F85319 /* SelectedItemStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D25C02FC6FB0F00F85319 /* SelectedItemStateView.swift */; };
 		B27D25CF2FC6FB0F00F85319 /* ToggleStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27D25C12FC6FB0F00F85319 /* ToggleStateView.swift */; };
+		B28B40D92FC944D800E51CA7 /* NestedObservableObjectDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B40D82FC944D800E51CA7 /* NestedObservableObjectDemoView.swift */; };
+		B28B40DB2FC9471000E51CA7 /* FixNestedObservableObjectDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B40DA2FC9471000E51CA7 /* FixNestedObservableObjectDemoView.swift */; };
+		B28B40DD2FC94AE900E51CA7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B40DC2FC94AE900E51CA7 /* ViewModel.swift */; };
+		B28B40DF2FC94AFA00E51CA7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B40DE2FC94AFA00E51CA7 /* Model.swift */; };
 		B296D71C2FC6B853009FF6E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B296D7132FC6B853009FF6E8 /* ContentView.swift */; };
 		B296D7202FC6B853009FF6E8 /* MyStateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B296D7172FC6B853009FF6E8 /* MyStateApp.swift */; };
 		B296D7242FC6B853009FF6E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B296D7122FC6B853009FF6E8 /* Assets.xcassets */; };
@@ -41,6 +45,10 @@
 		B27D25BF2FC6FB0F00F85319 /* NavigationStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStateView.swift; sourceTree = "<group>"; };
 		B27D25C02FC6FB0F00F85319 /* SelectedItemStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItemStateView.swift; sourceTree = "<group>"; };
 		B27D25C12FC6FB0F00F85319 /* ToggleStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStateView.swift; sourceTree = "<group>"; };
+		B28B40D82FC944D800E51CA7 /* NestedObservableObjectDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedObservableObjectDemoView.swift; sourceTree = "<group>"; };
+		B28B40DA2FC9471000E51CA7 /* FixNestedObservableObjectDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixNestedObservableObjectDemoView.swift; sourceTree = "<group>"; };
+		B28B40DC2FC94AE900E51CA7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		B28B40DE2FC94AFA00E51CA7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B296D6D02FC6B3E1009FF6E8 /* MyState.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyState.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B296D7122FC6B853009FF6E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B296D7132FC6B853009FF6E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +105,17 @@
 			path = BasicState;
 			sourceTree = "<group>";
 		};
+		B28B40D62FC944CB00E51CA7 /* Nested ObservableObject */ = {
+			isa = PBXGroup;
+			children = (
+				B28B40D82FC944D800E51CA7 /* NestedObservableObjectDemoView.swift */,
+				B28B40DA2FC9471000E51CA7 /* FixNestedObservableObjectDemoView.swift */,
+				B28B40DC2FC94AE900E51CA7 /* ViewModel.swift */,
+				B28B40DE2FC94AFA00E51CA7 /* Model.swift */,
+			);
+			path = "Nested ObservableObject";
+			sourceTree = "<group>";
+		};
 		B296D6C72FC6B3E1009FF6E8 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +150,7 @@
 				C10000252FD1000000A00001 /* ViewModel */,
 				C10000242FD1000000A00001 /* StateObject */,
 				C10000232FD1000000A00001 /* ObservedObject */,
+				B28B40D62FC944CB00E51CA7 /* Nested ObservableObject */,
 				B2D2A14B2FC8478B00E77452 /* README.md */,
 			);
 			path = ObservableObject;
@@ -233,14 +253,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B28B40DF2FC94AFA00E51CA7 /* Model.swift in Sources */,
 				B296D71C2FC6B853009FF6E8 /* ContentView.swift in Sources */,
 				C10000022FD1000000A00001 /* CounterStateObjectView.swift in Sources */,
 				C10000032FD1000000A00001 /* CounterObservedObjectView.swift in Sources */,
+				B28B40DB2FC9471000E51CA7 /* FixNestedObservableObjectDemoView.swift in Sources */,
 				C10000062FD1000000A00001 /* CounterViewModel.swift in Sources */,
 				B27D25C42FC6FB0F00F85319 /* DisplayValueBindingExample.swift in Sources */,
 				B27D25C52FC6FB0F00F85319 /* FormInputBindingExample.swift in Sources */,
 				B27D25C62FC6FB0F00F85319 /* LoadingBindingExample.swift in Sources */,
 				B27D25C72FC6FB0F00F85319 /* NavigationBindingExample.swift in Sources */,
+				B28B40D92FC944D800E51CA7 /* NestedObservableObjectDemoView.swift in Sources */,
+				B28B40DD2FC94AE900E51CA7 /* ViewModel.swift in Sources */,
 				B27D25C82FC6FB0F00F85319 /* SelectedItemBindingExample.swift in Sources */,
 				B27D25C92FC6FB0F00F85319 /* ToggleBindingExample.swift in Sources */,
 				B27D25CA2FC6FB0F00F85319 /* DisplayValueStateView.swift in Sources */,

@@ -13,6 +13,7 @@
 - `ObservableObject`
 - `@StateObject`
 - `@ObservedObject`
+- Nested `ObservableObject`
 
 ## โครงสร้าง
 
@@ -25,6 +26,11 @@ ObservableObject/
     CounterStateObjectView.swift
   ObservedObject/
     CounterObservedObjectView.swift
+  Nested ObservableObject/
+    Model.swift
+    ViewModel.swift
+    NestedObservableObjectDemoView.swift
+    FixNestedObservableObjectDemoView.swift
 ```
 
 ## ลำดับการเรียนรู้ที่แนะนำ
@@ -32,12 +38,21 @@ ObservableObject/
 1. `CounterViewModel.swift`
 2. `CounterStateObjectView.swift`
 3. `CounterObservedObjectView.swift`
+4. `NestedObservableObjectDemoView.swift`
+5. `FixNestedObservableObjectDemoView.swift`
 
 ## แนวคิดสำคัญ
 
 - `ObservableObject` คือ protocol ที่มักถูก adopt โดย class ที่ใช้เป็น ViewModel
 - `@StateObject` ใช้เมื่อ View เป็นคนสร้างและถือ ViewModel เอง
 - `@ObservedObject` ใช้เมื่อ View รับ ViewModel จากภายนอกมา observe ต่อ
+- `Nested ObservableObject` เป็นเคสที่ object หนึ่งถือ `ObservableObject` อีกตัวไว้ด้านใน ซึ่งอาจทำให้ View ไม่ update ตามที่คาด ถ้า observe ไม่ถูกจุด
+
+## ตัวอย่างที่เพิ่มเข้ามา
+
+- `NestedObservableObjectDemoView.swift` ใช้แสดงเคสพื้นฐานของ nested object ที่ parent view model ถือ `CartViewModel` ไว้ภายใน
+- `FixNestedObservableObjectDemoView.swift` ใช้แสดงแนวทางแยก child view ให้ observe object ตัวที่เปลี่ยนแปลงจริงโดยตรง
+- `Model.swift` และ `ViewModel.swift` ใช้ประกอบตัวอย่างของ `CartItem`, `CartViewModel` และ `UserSessionViewModel`
 
 ## หมายเหตุ
 

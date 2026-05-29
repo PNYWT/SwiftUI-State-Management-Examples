@@ -28,6 +28,7 @@ MyState/
     ViewModel/
     StateObject/
     ObservedObject/
+    Nested ObservableObject/
 ```
 
 ## เนื้อหาในแต่ละ Part
@@ -61,12 +62,17 @@ part นี้เพิ่มตัวอย่าง `ObservableObject` เข�
 - `ObservableObject`
 - `@StateObject`
 - `@ObservedObject`
+- Nested `ObservableObject`
 
 ไฟล์หลักในหมวดนี้ เช่น
 
 - `CounterViewModel.swift`
 - `CounterStateObjectView.swift`
 - `CounterObservedObjectView.swift`
+- `NestedObservableObjectDemoView.swift`
+- `FixNestedObservableObjectDemoView.swift`
+
+ใน part นี้นอกจากตัวอย่างพื้นฐานของ `ObservableObject` แล้ว ยังมีตัวอย่าง `Nested ObservableObject` เพิ่มเข้ามาเพื่อให้เห็นเคสที่เจอบ่อยเวลา object หนึ่งถืออีก object หนึ่งอยู่ภายใน และทำให้เข้าใจข้อจำกัดของการ update UI ในโครงสร้างแบบซ้อนกันมากขึ้น
 
 ### PART 3
 
